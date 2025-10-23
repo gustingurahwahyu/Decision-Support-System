@@ -68,5 +68,3 @@ Pengetahuan tersebut diadaptasi menjadi aturan (_rule-based_) dalam logika siste
 | Tipe DSS  | Rule-Based Decision Support System |
 
 ---
-
-## 📋 Struktur Direktori Utama
