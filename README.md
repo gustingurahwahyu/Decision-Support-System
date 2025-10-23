@@ -1,62 +1,72 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <a href="https://laravel.com" target="_blank">
+    <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo">
+  </a>
 </p>
 
-## About Laravel
+<p align="center">
+  <img src="https://img.shields.io/badge/Laravel-11.x-red?style=flat-square" alt="Laravel Version">
+  <img src="https://img.shields.io/badge/Database-SQLite-blue?style=flat-square" alt="Database">
+  <img src="https://img.shields.io/badge/Status-Completed-green?style=flat-square" alt="Status">
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+# 🏝️ Decision Support System: Rekomendasi Wisata di Bali
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**Decision Support System (DSS) Rekomendasi Wisata di Bali** adalah aplikasi berbasis web sederhana yang dikembangkan menggunakan **Laravel** dan **SQLite**.  
+Sistem ini bertujuan membantu pengguna menentukan rekomendasi tempat wisata di Bali berdasarkan preferensi pribadi seperti jenis wisata, suasana, aktivitas air, lokasi pantai, dan minat kuliner.
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🎯 Tujuan Proyek
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Memberikan dukungan keputusan yang membantu wisatawan dalam memilih destinasi wisata yang sesuai dengan minat dan karakteristik mereka.  
+Proyek ini juga menjadi implementasi konsep _Knowledge-Based Decision Support System_ dengan mengacu pada pengetahuan seorang pakar di bidang pariwisata.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 🧠 Pakar dan Akuisisi Ilmu
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+**Nama Pakar:**  
+**Ni Luh Putu Yuliani, S.Par., M.Par.**  
+Dosen Pariwisata – Universitas Udayana
 
-### Premium Partners
+**Sumber Pengetahuan:**  
+Beliau mengklasifikasikan berbagai destinasi wisata di Bali berdasarkan preferensi wisatawan — meliputi wisata alam, budaya, kuliner, petualangan, dan relaksasi.  
+Pengetahuan tersebut diadaptasi menjadi aturan (_rule-based_) dalam logika sistem.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+## 🧩 Fitur Utama
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+-   🧭 Form berisi 5 pertanyaan untuk mengetahui preferensi wisata pengguna
+-   🤖 Logika pengambilan keputusan berbasis aturan sederhana (_rule-based system_)
+-   🗃️ Penyimpanan data jawaban dan hasil rekomendasi menggunakan SQLite
+-   📊 Tampilan hasil rekomendasi disertai nama pakar sumber pengetahuan
+-   🎨 Desain responsif menggunakan Tailwind CSS
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 🗺️ Alur Sistem
 
-## Security Vulnerabilities
+1. Pengguna membuka halaman utama dan mengisi 5 pertanyaan singkat.
+2. Sistem memproses jawaban menggunakan aturan keputusan (if–else rule).
+3. Hasil rekomendasi wisata akan ditampilkan berdasarkan preferensi.
+4. Data pengguna dan hasil rekomendasi otomatis disimpan ke database.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## 💻 Teknologi yang Digunakan
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# Decision-Support-System
+| Komponen  | Teknologi                          |
+| --------- | ---------------------------------- |
+| Framework | Laravel 11                         |
+| Database  | SQLite (default Laravel)           |
+| Frontend  | Tailwind CSS                       |
+| Bahasa    | PHP 8+                             |
+| Tipe DSS  | Rule-Based Decision Support System |
+
+---
+
+## 📋 Struktur Direktori Utama
