@@ -9,7 +9,12 @@ class DssController extends Controller
 {
     public function index()
     {
-        return view('form');
+        return view('index');
+    }
+
+    public function form()
+    {
+        return view('pageForm');
     }
 
     public function process(Request $request)
@@ -60,7 +65,7 @@ class DssController extends Controller
         } elseif ($preferensi === 'alam' && $kuliner) {
             return "Bedugul";
         } else {
-            return "Seminyak / Kuta";
+            return "Kuta";
         }
     }
 }

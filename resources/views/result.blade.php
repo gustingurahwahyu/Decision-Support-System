@@ -5,47 +5,52 @@
     <meta charset="UTF-8">
     <title>Hasil Rekomendasi Wisata</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            font-family: 'Montserrat', sans-serif;
             min-height: 100vh;
-        }
-
-        .glass {
-            background: rgba(255, 255, 255, 0.85);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
-            backdrop-filter: blur(6px);
-            border-radius: 1.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            background-image: url('../images/{{ strtolower(str_replace(' / ', '-', str_replace(' ', '-', $hasil))) }}.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
     </style>
 </head>
 
-<body class="flex items-center justify-center min-h-screen">
-    <div class="glass max-w-xl w-full mx-auto p-8">
-        <h1 class="text-3xl font-bold text-center mb-6 text-purple-700 drop-shadow">🏝️ Hasil Rekomendasi Wisata
-        </h1>
+<body class="flex items-center justify-center min-h-screen bg-black/40">
+    <x-navbar />
+    <div class=" mx-auto">
+        <div class="bg-white/95 backdrop-blur-md rounded-2xl w-full px-8 py-10 shadow-xl border border-gray-100">
+            <h1
+                class="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-yellow-800 to-yellow-400 bg-clip-text text-transparent">
+                Hasil Rekomendasi Wisata
+            </h1>
 
-        <p class="text-lg text-gray-700 mb-4 text-center">Halo <strong>{{ $nama }}</strong>! Berdasarkan
-            preferensimu,<br>
-            rekomendasi tempat wisata terbaik untukmu adalah:</p>
+            <div class="space-y-6">
+                <p class="text-lg text-gray-700 mb-4 text-center">
+                    Halo <strong class="text-yellow-800">{{ $nama }}</strong>!
+                    <br>Berdasarkan preferensimu, rekomendasi tempat wisata terbaik untukmu adalah:
+                </p>
 
-        <div class="text-center bg-blue-100 py-6 rounded-xl text-2xl font-semibold text-purple-700 shadow mb-4">
-            {{ $hasil }}
-        </div>
+                <div
+                    class="text-center bg-gradient-to-r from-yellow-50 to-yellow-100 py-8 rounded-xl text-2xl font-semibold text-yellow-800 shadow-md mb-4 border border-yellow-200">
+                    {{ $hasil }}
+                </div>
 
-        <div class="mt-2 text-sm text-gray-600 text-center">
-            <p>💡 <em>Pengetahuan diakuisisi dari <strong>Ni Luh Putu Yuliani, S.Par., M.Par.</strong>, Dosen Pariwisata
-                    Universitas Udayana.</em></p>
-        </div>
+                <div class="mt-4 text-sm text-gray-600 text-center">
+                    <p>💡 <em>Pengetahuan diakuisisi dari <strong>Ni Luh Putu Yuliani, S.Par., M.Par.</strong>,
+                            <br>Dosen Pariwisata Universitas Udayana.</em></p>
+                </div>
 
-        <div class="mt-6 text-center">
-            <a href="/"
-                class="bg-gradient-to-r from-purple-500 to-blue-400 text-white font-semibold px-6 py-2 rounded-lg shadow-lg hover:from-purple-600 hover:to-blue-500 transition">
-                Coba Lagi
-            </a>
+                <div class="mt-8 text-center">
+                    <a href="/form"
+                        class="inline-block bg-gradient-to-r from-yellow-800 to-yellow-400 hover:from-yellow-200 hover:to-yellow-400 text-white font-semibold px-8 py-3 rounded-xl shadow-lg transition-all hover:shadow-xl">
+                        Coba Lagi
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </body>
