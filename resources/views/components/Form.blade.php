@@ -1,4 +1,4 @@
-<div class="w-[80%] mx-auto">
+<div data-aos="zoom-in" class="w-[80%] mx-auto">
     <div class="bg-white/95 backdrop-blur-md rounded-2xl w-full px-8 py-10 shadow-xl border border-gray-100">
         <h1
             class="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-yellow-800 to-yellow-400 bg-clip-text text-transparent">

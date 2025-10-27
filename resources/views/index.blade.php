@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Rekomendasi Wisata Bali</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <style>
@@ -20,19 +21,19 @@
 
     <!-- Stats -->
     <div class="absolute left-1/2 -bottom-16 transform -translate-x-1/2 flex gap-6">
-        <div class="bg-white rounded-xl shadow-lg px-6 py-4 text-center">
+        <div data-aos="fade-right" class="bg-white rounded-xl shadow-lg px-6 py-4 text-center">
             <div class="text-2xl font-bold text-yellow-600">100+</div>
             <div class="text-gray-700 text-sm">Destinasi Wisata</div>
         </div>
-        <div class="bg-white rounded-xl shadow-lg px-6 py-4 text-center">
+        <div data-aos="fade-right" class="bg-white rounded-xl shadow-lg px-6 py-4 text-center">
             <div class="text-2xl font-bold text-yellow-600">10+</div>
             <div class="text-gray-700 text-sm">Kriteria Penilaian</div>
         </div>
-        <div class="bg-white rounded-xl shadow-lg px-6 py-4 text-center">
+        <div data-aos="fade-left" class="bg-white rounded-xl shadow-lg px-6 py-4 text-center">
             <div class="text-2xl font-bold text-yellow-600">Sistem Pakar</div>
             <div class="text-gray-700 text-sm">Berbasis Pengetahuan</div>
         </div>
-        <div class="bg-white rounded-xl shadow-lg px-6 py-4 text-center">
+        <div data-aos="fade-left" class="bg-white rounded-xl shadow-lg px-6 py-4 text-center">
             <div class="text-2xl font-bold text-yellow-600">Cepat</div>
             <div class="text-gray-700 text-sm">Hasil Akurat</div>
         </div>
@@ -54,15 +55,22 @@
         </div>
         <!-- Gallery Grid -->
         <div id="gallery" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <img src="../images/kintamani.jpg" alt="kintamani Bali" class="rounded-xl object-cover w-full h-56 shadow">
-            <img src="../images/nusa-penida.jpg" alt="nusa penida Bali"
+            <img data-aos="fade-right" src="../images/kintamani.jpg" alt="kintamani Bali"
                 class="rounded-xl object-cover w-full h-56 shadow">
-            <img src="../images/kuta.jpg" alt="kuta Bali" class="rounded-xl object-cover w-full h-56 shadow">
-            <img src="../images/ubud.jpg" alt="ubud Bali" class="rounded-xl object-cover w-full h-56 shadow">
+            <img data-aos="fade-left" src="../images/nusa-penida.jpg" alt="nusa penida Bali"
+                class="rounded-xl object-cover w-full h-56 shadow">
+            <img data-aos="fade-right" src="../images/kuta.jpg" alt="kuta Bali"
+                class="rounded-xl object-cover w-full h-56 shadow">
+            <img data-aos="fade-left" src="../images/ubud.jpg" alt="ubud Bali"
+                class="rounded-xl object-cover w-full h-56 shadow">
         </div>
     </section>
-
+    <x-card />
     <x-footer />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

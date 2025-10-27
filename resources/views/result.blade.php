@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Hasil Rekomendasi Wisata</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <style>
@@ -19,9 +20,9 @@
     </style>
 </head>
 
-<body class="flex items-center justify-center min-h-screen bg-black/40">
+<body class="flex items-center justify-center min-h-screen bg-black/40 backdrop-blur-sm">
     <x-navbar />
-    <div class=" mx-auto">
+    <div data-aos="zoom-in" class=" mx-auto">
         <div class="bg-white/95 backdrop-blur-md rounded-2xl w-full px-8 py-10 shadow-xl border border-gray-100">
             <h1
                 class="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-yellow-800 to-yellow-400 bg-clip-text text-transparent">
@@ -53,6 +54,10 @@
             </div>
         </div>
     </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
